@@ -1,0 +1,35 @@
+﻿
+
+@model IEnumerable<Coffe_Gourment.Models.Producto>
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<h1><a href="#">Estos son nuestros productos</a></h1>
+
+<div class="row">
+    @foreach (var p in Model)
+    {
+        <div class="card col-lg-4">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p>Nombre: @p.Nombre </p>
+                </div>
+                <div class="panel-body">
+
+                    <img class="card-img-top" width="120" height="100" src="@p.Foto" />
+                    <p>ID: @p.idProducto</p>
+                    <p>Descripción: @p.Descripcion</p>
+                    <p>Precio: $@p.Precio</p>
+                    <p>Stock: @p.Cantidad</p>
+                    <button class="fas fa-shopping-cart"></button> <br />
+                    <br />
+                    <button type="button" class="btn btn-success">@Html.ActionLink("Comprar", "Index", "IndexPago")</button>
+                </div>
+
+            </div>
+        </div>
+    }
+</div>

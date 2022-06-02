@@ -1,0 +1,122 @@
+﻿body {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    background-color: #33234e ;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+.vtex-toast {
+    background-color: blue;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    color: black;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 81px;
+    min-height: calc(100vh - 100px - 81px);
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.Imagen {
+    position: fixed;
+    margin: 13%;
+    border-radius: 40%;
+    position: absolute;
+    bottom: 0px;
+    right: auto;
+    top: auto;
+}
+
+.busqueda {
+    top: 10px;
+}
+
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.slider {
+  position: relative;
+  width: 800px;
+  height: 300px;
+}
+
+ul.slider li {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  width: inherit;
+  height: inherit;
+  transition: opacity .5s;
+  background: #fff;
+}
+
+ul.slider li img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+ul.slider li:first-child {
+  opacity: 1; /*Mostramos el primer <li>*/
+}
+
+ul.slider li:target {
+  opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+.menu {
+  text-align: center;
+  margin: 20px;
+}
+
+.menu li {
+  display: inline-block;
+  text-align: center;
+}
+
+.menu li a {
+  display: inline-block;
+  color: red;
+  text-decoration: none;
+  background-color: grey;
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  border-radius: 100%;
+  position: static;
+}
+
+
+.slide {   
+    margin:auto;
+    width: 800px;
+    padding: 50px;
+}

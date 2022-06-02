@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - PatStore</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/fontawesome")
+    @Styles.Render("~/Header/HeaderStyle.css")
+
+
+    <script src="https://kit.fontawesome.com/5dbddadfc0.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="assets/demo.css">
+    <link rel="stylesheet" href="assets/header-fixed.css">
+    <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <header class="header-fixed">
+
+        <div class="header-limiter">
+
+            
+            <h1><a href="#">@Html.ActionLink("PatS", "Index", "Home")<span>Store</span></a></h1>
+
+
+            <nav>
+                <a @Html.ActionLink("Productos", "Index", "ProductosVista") </a>
+                <a @Html.ActionLink("Info", "About", "Home") </a>
+                <a @Html.ActionLink("Contacto", "Contact", "Home") </a>
+                <a class="fa fa-sign-in"> @Html.ActionLink("Login", "Index", "Login")</a>
+                <a class="fas fa-shopping-cart"> @Html.ActionLink("Carrito", "Index", "IndexPago")</a>
+                
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- You need this element to prevent the content of the page from jumping up -->
+    <div class="header-fixed-placeholder"></div>
+
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            var showHeaderAt = 150;
+
+            var win = $(window),
+                body = $('body');
+
+            // Show the fixed header only on larger screen devices
+
+            if (win.width() > 400) {
+
+                // When we scroll more than 150px down, we set the
+                // "fixed" class on the body element.
+
+                win.on('scroll', function (e) {
+
+                    if (win.scrollTop() > showHeaderAt) {
+                        body.addClass('fixed');
+                    }
+                    else {
+                        body.removeClass('fixed');
+                    }
+                });
+
+            }
+
+        });
+
+    </script>
+
+
+    <!-- Demo ads. Please ignore and remove. -->
+    <script src="http://cdn.tutorialzine.com/misc/enhance/v3.js" async></script>
+
+
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+
+
+
+    </div>
+
+
+    <footer class="page-footer font-small unique-color-dark text-center" id="footer">
+        <div style="background-color: #292c2f">
+            <div class="container">
+                <div class="row py-4 d-flex align-items-center">
+
+                    <div class="col-md-1 text-left text-md-left mb-4 mb-md-0">
+
+                        <img src="~/Image/a.png" height="60px" width="90px" />
+
+                    </div>
+                    <div class="col-xs-4  col-lg-5 mb-4 mb-md-0">
+
+
+                        <h6 class="mb-0" style="color:white;">CONTACTANOS EN NUESTRAS REDES</h6>
+
+
+                    </div>
+
+                    <div class="btn btn-fb">
+                        <!--Facebook-->
+                        <a href="https://es-la.facebook.com/" target="_blank">
+
+                            <button type="button" class="btn btn-fb"><i class="fa fa-facebook left"></i> Facebook</button>
+                        </a>
+
+                        <!--Instagram-->
+                        <a href="https://instagram.com/" target="_blank">
+
+                            <button type="button" class="btn btn-ins"><i class="fa fa-instagram left"></i> Instagram</button>
+                        </a>
+
+                        <!--Email-->
+                        <a href="https://mail.google.com/" target="_blank">
+
+                            <button type="button" class="btn btn-email"><i class="fa fa-envelope left"></i> Email</button>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-copyright text-center py-3">
+
+            <p style="color:red">@DateTime.Now.Year - Aplicación Web con ASP.NET</p>
+        </div>
+
+    </footer>
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <script>
+        $(document).ready(function () {
+            var docHeight = $(window).height();
+            var footerHeight = $('#footer').height();
+            var footerTop = $('#footer').position().top + footerHeight;
+
+            if (footerTop < docHeight)
+                $('#footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
+        })
+
+
+    </script>
+
+
+ 
+
+</body>
+</html>
