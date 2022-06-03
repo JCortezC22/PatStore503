@@ -1,0 +1,321 @@
+﻿
+#contact {
+    width: 100%;
+    height: 100%;
+}
+
+.section-header {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0;
+    font: 300 60px 'Oswald', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    max-width: 840px;
+}
+
+/* Left contact page */
+.form-horizontal {
+    /*float: left;*/
+    max-width: 400px;
+    font-family: 'Lato';
+    font-weight: 400;
+}
+
+.form-control,
+textarea {
+    max-width: 400px;
+    background-color: white;
+    color: black;
+    letter-spacing: 1px;
+}
+
+.send-button {
+    margin-top: 15px;
+    height: 34px;
+    width: 400px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.alt-send-button {
+    width: 400px;
+    height: 34px;
+    transition: all .2s ease-in-out;
+}
+
+.send-text {
+    display: block;
+    margin-top: 10px;
+    font: 700 12px 'Lato', sans-serif;
+    letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+    transform: translate3d(0px, -29px, 0px);
+}
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+    max-width: 400px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+    list-style-type: none;
+    margin-left: -30px;
+    padding-right: 20px;
+}
+
+.list-item {
+    line-height: 4;
+    color: white;
+}
+
+.contact-text {
+    font: 300 18px 'Lato', sans-serif;
+    letter-spacing: 1.9px;
+    color: white;
+}
+
+.place {
+    margin-left: 62px;
+}
+
+.phone {
+    margin-left: 56px;
+}
+
+.gmail {
+    margin-left: 53px;
+}
+
+.contact-text a {
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+    .contact-text a:hover {
+        color: white;
+        text-decoration: none;
+    }
+
+
+/* Social Media Icons */
+.social-media-list {
+    position: relative;
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+    .social-media-list li a {
+        color: white;
+    }
+
+    .social-media-list li {
+        position: relative;
+        display: inline-block;
+        height: 60px;
+        width: 60px;
+        margin: 10px 3px;
+        line-height: 60px;
+        border-radius: 50%;
+        color: white;
+        background-color: rgb(27,27,27);
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+    }
+
+        .social-media-list li:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            opacity: 0;
+            box-shadow: 0 0 0 1px white;
+            transition: all .2s ease-in-out;
+        }
+
+        .social-media-list li:hover {
+            background-color: white;
+        }
+
+            .social-media-list li:hover:after {
+                opacity: 1;
+                transform: scale(1.12);
+                transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+            }
+
+            .social-media-list li:hover a {
+                color: white;
+            }
+
+.copyright {
+    font: 200 14px 'Oswald', sans-serif;
+    color: white;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+hr {
+    border-color: white;
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+    .contact-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .direct-contact-container, .form-horizontal {
+        margin: 0 auto;
+    }
+
+    .direct-contact-container {
+        margin-top: 60px;
+        max-width: 300px;
+    }
+
+    .social-media-list li {
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+    }
+
+        .social-media-list li:after {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+        }
+}
+
+@media screen and (max-width: 569px) {
+
+    .direct-contact-container, .form-wrapper {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .form-control, textarea {
+        margin: 0 auto;
+    }
+
+
+    .name, .email, textarea {
+        width: 280px;
+    }
+
+    .direct-contact-container {
+        margin-top: 60px;
+        max-width: 280px;
+    }
+
+    .social-media-list {
+        left: 0;
+    }
+
+        .social-media-list li {
+            height: 55px;
+            width: 55px;
+            line-height: 55px;
+            font-size: 2rem;
+        }
+
+            .social-media-list li:after {
+                width: 55px;
+                height: 55px;
+                line-height: 55px;
+            }
+}
+
+@media screen and (max-width: 410px) {
+    .send-button {
+        width: 99%;
+    }
+}
+/* Adjusts to any size window <3 */
+
+:root {
+    --c1: hsl(219, 79%, 66%);
+    --c2: hsl(319, 100%, 60%);
+    --c3: hsl(266, 49%, 25%);
+    --c4: hsl(60, 82%, 58%);
+    --c5: hsl(0, 67%, 55%);
+    --c6: hsl(213, 96%, 11%);
+    --c2hsl: 319, 100%, 60%;
+}
+
+@property --outrun {
+    syntax: "<number>";
+    initial-value: 0;
+    inherits: false;
+}
+
+@keyframes outrun {
+    to {
+        --outrun: 1;
+    }
+}
+
+html {
+    height: 100vh;
+}
+
+    html::before {
+        content: "";
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        height: 100vh;
+        z-index: -1;
+        pointer-events: none;
+        filter: brightness(1.125);
+        animation: outrun 0.6s linear infinite;
+        --lgDepth: url("data:image/svg+xml;utf8,<svg width=\"1808\" height=\"230\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M904 -46 L-3616 230 M904 -46 L-3254.4 230 M904 -46 L-2892.8 230 M904 -46 L-2531.2000000000003 230 M904 -46 L-2169.6000000000004 230 M904 -46 L-1808 230 M904 -46 L-1446.4 230 M904 -46 L-1084.8000000000002 230 M904 -46 L-723.2 230 M904 -46 L-361.6 230 M904 -46 L0 230 M904 -46 L361.6 230 M904 -46 L723.2 230 M904 -46 L1084.8000000000002 230 M904 -46 L1446.4 230 M904 -46 L1808 230 M904 -46 L2169.6000000000004 230 M904 -46 L2531.2000000000003 230 M904 -46 L2892.8 230 M904 -46 L3254.4 230 M904 -46 L3616 230 M904 -46 L3977.6000000000004 230 M904 -46 L4339.200000000001 230 M904 -46 L4700.8 230 M904 -46 L5062.400000000001 230 M904 -46 L5424 230\" stroke=\"cornflowerblue\" stroke-width=\"2\" vector-effect=\"non-scaling-stroke\" /></svg>") left bottom / 100% 40% no-repeat;
+        --outrun: 0;
+        --pos: var(--outrun, 0);
+        --distance: 0.5%;
+        --hor: 60%;
+        --l0: var(--hor) + 0 * 0 * var(--distance) + (((0 + 1) * (0 + 1) * var(--distance) - 0 * 0 * var(--distance)) * var(--pos));
+        --l1: var(--hor) + 1 * 1 * var(--distance) + (((1 + 1) * (1 + 1) * var(--distance) - 1 * 1 * var(--distance)) * var(--pos));
+        --l2: var(--hor) + 2 * 2 * var(--distance) + (((2 + 1) * (2 + 1) * var(--distance) - 2 * 2 * var(--distance)) * var(--pos));
+        --l3: var(--hor) + 3 * 3 * var(--distance) + (((3 + 1) * (3 + 1) * var(--distance) - 3 * 3 * var(--distance)) * var(--pos));
+        --l4: var(--hor) + 4 * 4 * var(--distance) + (((4 + 1) * (4 + 1) * var(--distance) - 4 * 4 * var(--distance)) * var(--pos));
+        --l5: var(--hor) + 5 * 5 * var(--distance) + (((5 + 1) * (5 + 1) * var(--distance) - 5 * 5 * var(--distance)) * var(--pos));
+        --l6: var(--hor) + 6 * 6 * var(--distance) + (((6 + 1) * (6 + 1) * var(--distance) - 6 * 6 * var(--distance)) * var(--pos));
+        --l7: var(--hor) + 7 * 7 * var(--distance) + (((7 + 1) * (7 + 1) * var(--distance) - 7 * 7 * var(--distance)) * var(--pos));
+        --l8: var(--hor) + 8 * 8 * var(--distance) + (((8 + 1) * (8 + 1) * var(--distance) - 8 * 8 * var(--distance)) * var(--pos));
+        --l9: var(--hor) + 9 * 9 * var(--distance) + (((9 + 1) * (9 + 1) * var(--distance) - 9 * 9 * var(--distance)) * var(--pos));
+        --lgh: linear-gradient(transparent 0px var(--hor), var(--c1) var(--hor) calc(var(--hor) + 2px), transparent calc(var(--hor) + 2px));
+        --lg0: linear-gradient(transparent 0px calc(var(--l0)), var(--c1) calc(var(--l0)) calc(var(--l0) + 2px), transparent calc(var(--l0) + 2px));
+        --lg1: linear-gradient(transparent 0px calc(var(--l1)), var(--c1) calc(var(--l1)) calc(var(--l1) + 2px), transparent calc(var(--l1) + 2px));
+        --lg2: linear-gradient(transparent 0px calc(var(--l2)), var(--c1) calc(var(--l2)) calc(var(--l2) + 2px), transparent calc(var(--l2) + 2px));
+        --lg3: linear-gradient(transparent 0px calc(var(--l3)), var(--c1) calc(var(--l3)) calc(var(--l3) + 2px), transparent calc(var(--l3) + 2px));
+        --lg4: linear-gradient(transparent 0px calc(var(--l4)), var(--c1) calc(var(--l4)) calc(var(--l4) + 2px), transparent calc(var(--l4) + 2px));
+        --lg5: linear-gradient(transparent 0px calc(var(--l5)), var(--c1) calc(var(--l5)) calc(var(--l5) + 2px), transparent calc(var(--l5) + 2px));
+        --lg6: linear-gradient(transparent 0px calc(var(--l6)), var(--c1) calc(var(--l6)) calc(var(--l6) + 2px), transparent calc(var(--l6) + 2px));
+        --lg7: linear-gradient(transparent 0px calc(var(--l7)), var(--c1) calc(var(--l7)) calc(var(--l7) + 2px), transparent calc(var(--l7) + 2px));
+        --lg8: linear-gradient(transparent 0px calc(var(--l8)), var(--c1) calc(var(--l8)) calc(var(--l8) + 2px), transparent calc(var(--l8) + 2px));
+        --lg9: linear-gradient(transparent 0px calc(var(--l9)), var(--c1) calc(var(--l9)) calc(var(--l9) + 2px), transparent calc(var(--l9) + 2px));
+        background: var(--lgDepth), var(--lgh), var(--lg0), var(--lg1), var(--lg2), var(--lg3), var(--lg4), var(--lg5), var(--lg6), var(--lg7), var(--lg8), var(--lg9), var(--mtn) center 60% / min(75vh, 75vw) no-repeat, var(--mtn2) center 60% / min(75vh, 75vw) repeat-x, linear-gradient(transparent 20%, var(--c5) 60%, var(--c3) 60% 70%, hsla(var(--c2hsl), 0.75), transparent 150%), repeating-linear-gradient(90deg, transparent 0px 2px, var(--c3) 3px 4px), radial-gradient(circle at center, transparent min(45vh, 45vw), hsla(var(--c2hsl), 0.75) min(65vh, 65vw), var(--c3) 120%), linear-gradient( transparent 30vh, var(--c5) 30vh 30.2vh, transparent 30.2vh 35.2vh, var(--c5) 35.2vh 36vh, transparent 36vh 40vh, var(--c5) 40vh 41.6vh, transparent 41.6vh 45.1vh, var(--c5) 45.1vh 48.6vh, transparent 48.6vh 52.5vh, var(--c5) 52.5vh 57.5vh, transparent 57.5vh ), radial-gradient(circle at center, var(--c4) min(45vh, 45vw), transparent min(45vh, 45vw)), linear-gradient(var(--c5) 60%, var(--c3) 60%, var(--c2) 150%);
+    }
