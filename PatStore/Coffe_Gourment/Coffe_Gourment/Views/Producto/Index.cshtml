@@ -3,50 +3,53 @@
 @{
     ViewBag.Title = "Index";
 }
-
-
+<link rel="stylesheet" href="~/Content/Textos.css" />
+<br />
 
 <td>
-    <button class="btn btn-success">@Html.ActionLink("Añadir producto (+)", "Create")</button> <br />
+    <button class="btn btn-success" >@Html.ActionLink("Añadir producto (+)", "Create")</button> <br />
 
 </td>
 
 <br />
-    
+
 
 
 @using (@Html.BeginForm())
- {
-                
-    @Html.TextBox("searchTerm", null, new { id = "texSearch"})
-    <input type="submit" value="Search" />
+{
 
- }
+    @Html.TextBox("searchTerm", null, new { id = "texSearch" })
+    <input type="submit" value="Search" />
+    <br />
+    <br />
+
+}
+
 <table class="table">
-    <tr >
-        <th>
+    <tr>
+        <th style="color: red">
             <h>ID</h>
         </th>
-        <th>
+        <th style="color: red ">
             @Html.DisplayNameFor(model => model.Nombre)
         </th>
-        <th>
+        <th style="color: red ">
             @Html.DisplayNameFor(model => model.Descripcion)
         </th>
-        <th>
+        <th style="color: red ">
             @Html.DisplayNameFor(model => model.Precio)
         </th>
-        <th>
+        <th style="color: red ">
             @Html.DisplayNameFor(model => model.Cantidad)
         </th>
-        <th>
+        <th style="color: red">
             @Html.DisplayNameFor(model => model.Estado)
         </th>
-        <th align="right">
-               @Html.DisplayNameFor(model => model.Foto)
+        <th style="color: red">
+            @Html.DisplayNameFor(model => model.Foto)
         </th>
 
-        <th class="">
+        <th style="color: red">
             Acciones
         </th>
     </tr>
@@ -55,30 +58,30 @@
     {
 
         <tr class="table-bordered">
-            <td >
+            <td style="color:white">
                 @Html.DisplayFor(modelItem => item.idProducto)
             </td>
-            <td>
+            <td style="color:white">
                 @Html.DisplayFor(modelItem => item.Nombre)
             </td>
-            <td>
+            <td style="color:white">
                 @Html.DisplayFor(modelItem => item.Descripcion)
             </td>
-            <td>
+            <td style="color:white">
                 @Html.DisplayFor(modelItem => item.Precio)
             </td>
-            <td>
+            <td style="color:white">
                 @Html.DisplayFor(modelItem => item.Cantidad)
             </td>
-            <td>
+            <td style="color:white">
                 @Html.DisplayFor(modelItem => item.Estado)
             </td>
-            <td > 
-                <img width="150" height="100" src=@Html.DisplayFor(modelItem => item.Foto)
+            <td style="color:white">
+                <img width="100" height="100" src=@Html.DisplayFor(modelItem => item.Foto)
             </td>
             <td style="color:blueviolet">
                 @Html.ActionLink("Editar", "Edit", new { id = item.idProducto })<br />
-                @Html.ActionLink("Detalles", "Details", new { id = item.idProducto })           
+                @Html.ActionLink("Detalles", "Details", new { id = item.idProducto })
                 <B><FONT COLOR="red">@Html.ActionLink("Eliminar", "Delete", new { id = item.idProducto }) </FONT>
             </td>
         </tr>
