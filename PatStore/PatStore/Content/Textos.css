@@ -7,3 +7,8 @@ th {
     font: oblique bold 120% cursive;
     text-shadow: 4px 1px 3px white;
 }
+
+
+h2 {
+    text-shadow: 4px 1px 2px white;
+}
