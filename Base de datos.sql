@@ -17,12 +17,12 @@ go
 
 create table Producto (
 idProducto int identity(1,1) NOT NULL PRIMARY KEY,
-Nombre varchar(50) not null,
-Descripcion varchar(700) not null,
-Precio decimal(5,2) not null,
+Nombre varchar(150) not null,
+Descripcion varchar(3000) not null,
+Precio decimal(6,2) not null,
 Cantidad int,
 Estado int,
-Foto varchar (1000)
+Foto varchar (1500)
 );
 
 go
@@ -51,3 +51,4 @@ FOREIGN KEY (idCliente) REFERENCES Cliente (idCliente)
 );
 
 go
+

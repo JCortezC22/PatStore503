@@ -1,33 +1,65 @@
 ﻿@model PatStore.Models.Producto
-
 @{
-    ViewBag.Title = "Detalles";
+    ViewBag.Title = "Details";
 }
 
-<section class="py-5" style="color:white">
-    <div class="container px-4 px-lg-5 my-5">
-        <div class="row gx-4 gx-lg-5 align-items-center">
-            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="@Html.DisplayTextFor(model => model.Foto);base64,@Html.DisplayTextFor(model => model.Cantidad)" alt="..."></div>
-            <div class="col-md-6">
-                <div class="small mb-1">@Html.DisplayTextFor(model => model.idProducto)</div>
-                <h1 class="display-5 fw-bolder">@Html.DisplayTextFor(model => model.Nombre)</h1>
-                <div class="fs-5 mb-5">
-                    <span>S/. @Html.DisplayTextFor(model => model.Precio)</span>
-                </div>
-                <p class="lead">@Html.DisplayTextFor(model => model.Descripcion)</p>
-                <div class="d-flex">
-                    <a href="@Url.Action("Index", "Tienda")" class="btn btn-danger w-50 text-center me-3">
-                        <i class="fas fa-undo-alt"></i> Volver
-                    </a>
+<h2 style="color: white">Detalles</h2>
 
+<div>
+    <h4 style="color: white">Producto</h4>
+    <hr />
+    <dl class="dl-horizontal" style="color: white">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
 
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
 
-@section scripts{
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
 
-}
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            Imagen: 
+        </dt>
+
+        <dd>
+           <img width="90" height="90" src=@Html.DisplayFor(model => model.Foto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <ul class="fa-solid fa-turn-down-left">@Html.ActionLink("Edit", "Edit", new { id = Model.idProducto }) </ul> <br />
+    <ul class="fa-solid fa-turn-down-left"> @Html.ActionLink("Back to List", "Index")</ul>
+</p>
